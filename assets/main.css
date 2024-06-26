@@ -1,0 +1,19 @@
+/* Layout */
+body > header {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+}
+
+body > header > nav {
+    background-color: var(--pico-progress-background-color);
+    margin-block-start: 0;
+    padding: 0 1rem;
+    opacity: 0.98;
+}
+
+main {
+    margin-top: 5rem;
+}
