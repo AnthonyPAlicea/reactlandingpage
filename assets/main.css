@@ -86,6 +86,16 @@ nav svg {
     }
 }
 
+@media (min-width: 1024px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
 main {
     margin-top: 5rem;
+}
+
+hgroup:has(h1) {
+    text-align: center;
 }
