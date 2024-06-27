@@ -1,4 +1,5 @@
 :root {
+    --pico-block-spacing-vertical: 2rem;
     --pico-color-yellow-950: #141103;
     --pico-color-yellow-900: #1f1c02;
     --pico-color-yellow-850: #2b2600;
@@ -98,4 +99,11 @@ main {
 
 hgroup:has(h1) {
     text-align: center;
+}
+
+h2 {
+    --pico-font-size: 1.5rem;
+    --pico-line-height: 1.175;
+    --pico-typography-spacing-top: 2.25rem;
+    margin-bottom: 0.25rem;
 }
