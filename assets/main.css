@@ -1,3 +1,54 @@
+:root {
+    --pico-color-yellow-950: #141103;
+    --pico-color-yellow-900: #1f1c02;
+    --pico-color-yellow-850: #2b2600;
+    --pico-color-yellow-800: #363100;
+    --pico-color-yellow-750: #423c00;
+    --pico-color-yellow-700: #4e4700;
+    --pico-color-yellow-650: #5b5300;
+    --pico-color-yellow-600: #685f00;
+    --pico-color-yellow-550: #756b00;
+    --pico-color-yellow-500: #827800;
+    --pico-color-yellow-450: #908501;
+    --pico-color-yellow-400: #9e9200;
+    --pico-color-yellow-350: #ad9f00;
+    --pico-color-yellow-300: #bbac00;
+    --pico-color-yellow-250: #caba01;
+    --pico-color-yellow-200: #d9c800;
+    --pico-color-yellow-150: #e8d600;
+    --pico-color-yellow-100: #f2df0d;
+    --pico-color-yellow-50: #fdf1b4;
+    --pico-color-yellow: #f2df0d;
+    --pico-color-grey-950: #111111;
+    --pico-color-grey-900: #1b1b1b;
+    --pico-color-grey-850: #262626;
+    --pico-color-grey-800: #303030;
+    --pico-color-grey-750: #3b3b3b;
+    --pico-color-grey-700: #474747;
+    --pico-color-grey-650: #525252;
+    --pico-color-grey-600: #5e5e5e;
+    --pico-color-grey-550: #6a6a6a;
+    --pico-color-grey-500: #777777;
+    --pico-color-grey-450: #808080;
+    --pico-color-grey-400: #919191;
+    --pico-color-grey-350: #9e9e9e;
+    --pico-color-grey-300: #ababab;
+    --pico-color-grey-250: #b9b9b9;
+    --pico-color-grey-200: #c6c6c6;
+    --pico-color-grey-150: #d4d4d4;
+    --pico-color-grey-100: #e2e2e2;
+    --pico-color-grey-50: #f1f1f1;
+    --pico-color-grey: #ababab;
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-block-start: var(--pico-typography-spacing-vertical);
+}
+
 /* Layout */
 body > header {
     margin: 0;
@@ -12,6 +63,27 @@ body > header > nav {
     margin-block-start: 0;
     padding: 0 1rem;
     opacity: 0.98;
+}
+
+nav .enroll {
+    background-color: var(--pico-color-yellow-100);
+    color: #000;
+    font-weight: bold;
+    border-color: #000;
+}
+
+nav .enroll:hover {
+    background-color: var(--pico-color-yellow);
+}
+
+nav svg {
+    height: 32px;
+}
+
+@media (min-width: 768px) {
+    nav svg {
+        height: 48px;
+    }
 }
 
 main {
