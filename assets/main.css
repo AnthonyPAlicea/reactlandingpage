@@ -107,3 +107,19 @@ h2 {
     --pico-typography-spacing-top: 2.25rem;
     margin-bottom: 0.25rem;
 }
+
+.credit {
+    font-size: .875rem;
+    font-style: italic;
+    margin-block-start: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Video */
+.video, video {
+    text-align: center;
+    padding: 1rem 0;
+    max-width: 100%;
+}
