@@ -117,6 +117,11 @@ main {
     margin-top: 5rem;
 }
 
+.container h3 {
+    font-size: 1.25rem;
+    color: var(--pico-color-yellow-150);
+}
+
 hgroup:has(h1) {
     text-align: center;
 }
