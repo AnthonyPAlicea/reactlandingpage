@@ -1,6 +1,6 @@
 import { Context } from "@netlify/edge-functions";
 
-export default async (request: Request, context: Context) => {
+export default async (request, context) => {
   
   // Just return what was requested without transforming it, 
   // unless we fnd the coupon code query parameter
