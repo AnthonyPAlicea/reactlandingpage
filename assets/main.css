@@ -1,5 +1,25 @@
 :root {
     --pico-block-spacing-vertical: 2rem;
+    --pico-color-blue-950: #080f2d;
+    --pico-color-blue-900: #0c1a41;
+    --pico-color-blue-850: #0e2358;
+    --pico-color-blue-800: #0f2d70;
+    --pico-color-blue-750: #0f3888;
+    --pico-color-blue-700: #1343a0;
+    --pico-color-blue-650: #184eb8;
+    --pico-color-blue-600: #1d59d0;
+    --pico-color-blue-550: #2060df;
+    --pico-color-blue-500: #3c71f7;
+    --pico-color-blue-450: #5c7ef8;
+    --pico-color-blue-400: #748bf8;
+    --pico-color-blue-350: #8999f9;
+    --pico-color-blue-300: #9ca7fa;
+    --pico-color-blue-250: #aeb5fb;
+    --pico-color-blue-200: #bfc3fa;
+    --pico-color-blue-150: #d0d2fa;
+    --pico-color-blue-100: #e0e1fa;
+    --pico-color-blue-50: #f0f0fb;
+    --pico-color-blue: #2060df;
     --pico-color-yellow-950: #141103;
     --pico-color-yellow-900: #1f1c02;
     --pico-color-yellow-850: #2b2600;
@@ -122,4 +142,63 @@ h2 {
     text-align: center;
     padding: 1rem 0;
     max-width: 100%;
+}
+
+/* Enroll */
+.enroll-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.enroll-container > * {
+    flex-basis: 100%;
+}
+
+.altlogo {
+    max-width: 80px;
+    margin: 1rem 0;
+}
+
+.enroll-form {
+    background-color: var(--pico-color-blue-900);
+    border: solid 2px var(--pico-color-yellow-100);
+    max-width: 500px;
+    color: #fff !important;
+}
+
+.enroll-form h3, .enroll-form ul {
+    color: #fff !important;
+}
+
+.enroll-header {
+    margin: 0;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.enroll-form button {
+    width: 100%;
+    background-color: var(--pico-color-yellow-100);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    margin: 1.25rem 0 1rem 0;
+}
+
+.enroll-list {
+    margin: 0;
+    padding: 0;
+}
+
+.enroll-list li {
+    list-style: none;
+    padding: 0 1rem;
+    margin: 0;
 }
