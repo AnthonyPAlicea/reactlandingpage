@@ -47,11 +47,12 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   </div>
 </section>
 
-<section class="container">
+<section class="container aboutme-container">
   <h2>About Me</h2>
-  <p>I'm Tony Alicea. I've been an application developer, database architect, UX designer, and tech educator for over 25 years.</p>
-    
-  <p>Over 350,000 students have enrolled in my courses on Udemy, Pluralsight, and Teachable (where this course is hosted). I've been a speaker at conferences like React Summit. You can see more about all my courses <a href="https://tonyalicea.dev/courses">on my site</a>.</p>
+  <div class="aboutme">
+    <div class="headshot"><img src="/assets/tonyheadshot.jpg" alt="Tony Alicea headshot" /></div>
+    <p><b>Hi, I'm Tony Alicea.</b> I've been an application developer, database architect, UX designer, and tech educator for over 25 years.<br /><br />Over 350,000 students have enrolled in my courses on Udemy, Pluralsight, and Teachable (where this course is hosted). I've been a speaker at conferences like React Summit, the biggest React conference in the world. You can read more about me and my courses <a href="https://tonyalicea.dev/courses">on my site</a>.</p>
+  </div>
 </section>
 
 <section class="container enroll-container">
@@ -63,12 +64,11 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   </hgroup>
   <article class="enroll-form">
     <h3 class="enroll-header">Full React Course</h3>
-    <p class="price" id="price">$149<p>
-    <label>For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>
+    <p class="price" id="price">$149</p><!--<label style="display: none;">For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>-->
+    <p class="lifetime">Lifetime Access</p>
     <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170"><button>Buy Now</button></a>
     <p>INCLUDES</p>
     <ul class="enroll-list">
-      <li>&check; Lifetime access</li>
       <li>&check; 16.5 hours of deep dive video</li>
       <li>&check; 158 lectures</li>
       <li>&check; All source code</li>
@@ -77,6 +77,22 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
       <li>&check; Free future updates</li>
     </ul>    
   </article>
+</section>
+
+<section class="container">
+  <h2>FAQs</h2>
+  <details>
+    <summary>Do you offer team discounts?</summary>
+    Yes! To request a discount for multiple seats for your team contact <a href="mailto:support@tonyalicea.dev">support@tonyalicea.dev</a>.
+  </details>
+  <details>
+    <summary>Do you offer Purchasing Power Parity (PPP) or student discounts?</summary>
+    Yes, I believe in PPP and student discounts. You can <a href="https://tonyalicea.dev/courses/understanding-react-ppp/">fill out a request form here</a>. PPP coupons are sent out every couple of weeks.
+  </details>
+  <details>
+    <summary>Is this a subscription?</summary>
+    No. This is a one time purchase for lifetime access to the course and all future updates.
+  </details>
 </section>
 
 <script>

@@ -137,11 +137,58 @@ h2 {
     justify-content: center;
 }
 
+.headshot {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: -2000;
+    border: solid 1px #000;
+    opacity: 0.9;
+}
+
+.headshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* Video */
 .video, video {
     text-align: center;
     padding: 1rem 0;
     max-width: 100%;
+}
+
+/* About Me */
+.aboutme-container {
+    text-align: center;
+}
+
+.aboutme-container h2 {
+    margin-bottom: 1rem;
+}
+
+.aboutme {
+    display: grid;
+    grid-template-columns: .25fr 1fr;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .aboutme {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .headshot {
+        margin: 0 auto;
+    }
 }
 
 /* Enroll */
@@ -197,6 +244,11 @@ h2 {
     color: var(--pico-color-grey-600);
 }
 
+.lifetime {
+    padding: 0;
+    margin: 0;
+}
+
 .enroll-form button {
     width: 100%;
     background-color: var(--pico-color-yellow-100);
@@ -215,4 +267,32 @@ h2 {
     list-style: none;
     padding: 0 1rem;
     margin: 0;
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    font-size: 0.75rem;
+    background-color: var(--pico-progress-background-color);
+}
+
+footer h2 {
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: var(--pico-color-grey-500);
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer a, footer a:visited, footer a:hover {
+    text-decoration: none;
+    color: var(--pico-color-grey-200);
+    font-weight: bold;
 }
