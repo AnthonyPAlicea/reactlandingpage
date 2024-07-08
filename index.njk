@@ -64,8 +64,8 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   <article class="enroll-form">
     <h3 class="enroll-header">Full React Course</h3>
     <p class="price">$149<p>
-    For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams
-    <button>Buy Now</button>
+    <label>For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>
+    <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170"><button>Buy Now</button></a>
     <p>INCLUDES</p>
     <ul class="enroll-list">
       <li>&check; Lifetime access</li>
@@ -79,5 +79,15 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   </article>
 </section>
 
-  
+<script>
+  // Define the target URL
+  const targetURL = 'https://dontimitateunderstand.com/purchase';
+  const productID = '4876170';
+
+  // Get the current URL's query string parameters
+  const queryString = window.location.search;
+
+  // Redirect to the target URL with the query string parameters
+  document.getElementById("buy-link").href = targetURL + queryString + '&product_id=' + productID;
+</script> 
 {% endblock %}

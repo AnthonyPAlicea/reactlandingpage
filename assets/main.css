@@ -169,6 +169,11 @@ h2 {
     color: #fff !important;
 }
 
+.enroll-form label {
+    text-align: center;
+    width: 100%;
+}
+
 .enroll-form h3, .enroll-form ul {
     color: #fff !important;
 }
