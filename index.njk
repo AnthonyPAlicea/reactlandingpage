@@ -83,6 +83,13 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   // Define the target URL
   const targetURL = 'https://dontimitateunderstand.com/purchase';
   const productID = '4876170';
+  const setPrice = "{{SET_PRICE}}";
+  const price = "{{PRICE}}";
+
+  // Set price if coupon code passed
+  if (setPrice === "YesSetPrice") {
+    console.log(price);
+  }
 
   // Get the current URL's query string parameters
   const queryString = window.location.search;
