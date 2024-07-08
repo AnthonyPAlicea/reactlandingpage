@@ -287,6 +287,26 @@ h2 {
     margin: 0;
 }
 
+/* Quotes */
+.quotegrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: .75rem;
+    justify-content: center;
+}
+
+.quotegrid > article {
+    flex-basis: 40%;
+}
+
+@media (max-width: 600px) {
+    .quotegrid > article {
+        flex-basis: 100%;
+        margin: 0;
+    }
+}
+
 /* Footer */
 footer {
     padding: 1rem;
