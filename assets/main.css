@@ -177,12 +177,21 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.aboutme {
+.imagegrid {
+    padding: 1rem 0;
+}
+
+.aboutme, .imagegrid {
     display: grid;
     grid-template-columns: .25fr 1fr;
     align-items: center;
     gap: 20px;
     text-align: left;
+    align-items: stretch;
+}
+
+.imagegrid--large {
+    grid-template-columns: 0.5fr 1fr;
 }
 
 @media (max-width: 600px) {
@@ -190,8 +199,12 @@ h2 {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+    .imagegrid {
+        grid-template-columns: 1fr;
+    }
     
-    .headshot {
+    .headshot, .imagegrid img {
         margin: 0 auto;
     }
 }
