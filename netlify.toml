@@ -9,3 +9,7 @@ publish = "_site"
 [[edge_functions]]
 function = "coupon_code"
 path = "/*"
+
+[[edge_functions]]
+function = "eleventy-edge"
+path = "/*"

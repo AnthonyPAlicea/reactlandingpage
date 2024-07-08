@@ -1,6 +1,8 @@
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { EleventyEdgePlugin } = require("@11ty/eleventy");
+
 
 module.exports = config => {
   
@@ -16,6 +18,8 @@ module.exports = config => {
     config.addPlugin(syntaxHighlight);
 
     config.addPlugin(pluginRss);
+
+    config.addPlugin(EleventyEdgePlugin);
 
     config.addCollection('postsWithoutDrafts', (collection) =>
       [...collection.getFilteredByTags("post")].filter(

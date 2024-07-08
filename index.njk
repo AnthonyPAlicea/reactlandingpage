@@ -63,7 +63,7 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   </hgroup>
   <article class="enroll-form">
     <h3 class="enroll-header">Full React Course</h3>
-    <p class="price">$149<p>
+    <p class="price" id="price">$149<p>
     <label>For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>
     <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170"><button>Buy Now</button></a>
     <p>INCLUDES</p>
@@ -83,12 +83,12 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   // Define the target URL
   const targetURL = 'https://dontimitateunderstand.com/purchase';
   const productID = '4876170';
-  const setPrice = "{{SET_PRICE}}";
-  const price = "{{PRICE}}";
+  const setPrice = "SET_PRICE";
+  const price = "LIST_PRICE";
 
   // Set price if coupon code passed
   if (setPrice === "YesSetPrice") {
-    console.log(price);
+    document.getElementById("price").innerHTML = '$' + price;
   }
 
   // Get the current URL's query string parameters
