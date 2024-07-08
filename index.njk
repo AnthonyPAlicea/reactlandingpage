@@ -443,9 +443,9 @@ metaTitle: Tony Alicea | Udemy and Pluralsight Instructor | JavaScript, HTML, CS
   }
 
   // Get the current URL's query string parameters
-  const queryString = window.location.search;
+    const queryString = window.location.search;
 
   // Redirect to the target URL with the query string parameters
-  document.getElementById("buy-link").href = targetURL + queryString + '&product_id=' + productID;
+  document.getElementById("buy-link").href = targetURL + (queryString ? queryString + '&' : '?')+ 'product_id=' + productID; 
 </script> 
 {% endblock %}
