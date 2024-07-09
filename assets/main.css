@@ -288,6 +288,17 @@ h2 {
 }
 
 /* Quotes */
+.quotes-header {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.quotes-header p {
+    color: var(--pico-color-yellow);
+    font-size: 1.25rem !important;
+    margin: 0;
+}
+
 .quotegrid {
     display: flex;
     flex-wrap: wrap;
