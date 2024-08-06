@@ -247,6 +247,11 @@ h2 {
     margin: 0;
 }
 
+.salemsg {
+    margin: 0;
+    padding: 0;
+}
+
 .price {
     font-size: 3rem;
     font-weight: bold;
@@ -260,6 +265,10 @@ h2 {
 .price s {
     font-size: 2rem;
     color: var(--pico-color-grey-600);
+}
+
+.salemsg + .price {
+    margin-block-start: 0 !important;
 }
 
 .lifetime {
