@@ -406,7 +406,7 @@ metaTitle: Understanding React by Tony Alicea
     <p class="price" id="price">$99<small>.83</small>&nbsp;<s>$149</s></p><!--<label style="display: none;">For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>-->
     <p class="lifetime">Lifetime Access</p>
     <p class="lifetime">Tax/VAT Included</p>
-    <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170"><button>Buy Now</button></a>
+    <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170&coupon_code=SUMMER2024"><button>Buy Now</button></a>
     <p>INCLUDES</p>
     <ul class="enroll-list">
       <li>&check; 16.5 hours of deep dive video</li>
@@ -438,6 +438,7 @@ metaTitle: Understanding React by Tony Alicea
 <script>
   const targetURL = 'https://dontimitateunderstand.com/purchase';
   const productID = '4876170';
+  const coupon_code = 'SUMMER2024';
   const setPrice = "SET_PRICE";
   const price = "LIST_PRICE";
 
@@ -448,8 +449,10 @@ metaTitle: Understanding React by Tony Alicea
 
   // Get the current URL's query string parameters
     const queryString = window.location.search;
+    const searchParams = new URLSearchParams(window.location.search);
+    const couponCode = (coupon_code && !searchParams.has('coupon_code')) ? '&coupon_code=' + coupon_code : '';
 
   // Redirect to the target URL with the query string parameters
-  document.getElementById("buy-link").href = targetURL + (queryString ? queryString + '&' : '?')+ 'product_id=' + productID; 
+  document.getElementById("buy-link").href = targetURL + (queryString ? queryString + '&' : '?')+ 'product_id=' + productID + couponCode; 
 </script> 
 {% endblock %}
