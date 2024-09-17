@@ -232,7 +232,7 @@ h2 {
     grid-template-columns: 0.5fr 1.25fr;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .aboutme {
         grid-template-columns: 1fr;
         text-align: center;
