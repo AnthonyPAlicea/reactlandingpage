@@ -60,6 +60,8 @@
     --pico-color-grey-100: #e2e2e2;
     --pico-color-grey-50: #f1f1f1;
     --pico-color-grey: #ababab;
+    --pico-background-color: #000205;
+    --pico-h2-color: #ffffff;
 }
 
 p {
@@ -97,13 +99,13 @@ nav .enroll:hover {
     background-color: var(--pico-color-yellow);
 }
 
-nav svg {
-    height: 32px;
+nav img {
+    height: 40px;
 }
 
 @media (min-width: 768px) {
-    nav svg {
-        height: 48px;
+    nav img {
+        height: 52px;
     }
 }
 
@@ -114,7 +116,23 @@ nav svg {
 }
 
 main {
-    margin-top: 5rem;
+    margin-top: 2rem;
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        max-width: 1400px;
+    }
 }
 
 .container h3 {
