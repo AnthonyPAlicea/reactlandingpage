@@ -369,6 +369,10 @@ h2 {
     }
 }
 
+.quotegrid p {
+    font-weight: 600;
+}
+
 /* Footer */
 footer {
     padding: 1rem;
