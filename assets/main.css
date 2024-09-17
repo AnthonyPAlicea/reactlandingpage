@@ -93,7 +93,7 @@ body > header > nav {
 nav .enroll {
     background-color: var(--pico-color-yellow-100);
     color: #000;
-    font-weight: bold;
+    font-weight: 900;
     border-color: #000;
 }
 
@@ -101,7 +101,7 @@ nav .enroll:hover {
     background-color: var(--pico-color-yellow);
 }
 
-h1, h2, h3 {
+h2, h3 {
     font-weight: 800;
 }
 
