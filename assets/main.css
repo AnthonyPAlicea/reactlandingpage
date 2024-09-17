@@ -61,6 +61,8 @@
     --pico-color-grey-50: #f1f1f1;
     --pico-color-grey: #ababab;
     --pico-background-color: #000205;
+    --pico-font-family-sans-serif: 'Inter', system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,Helvetica,Arial,"Helvetica Neue",sans-serif,var(--pico-font-family-emoji);
+    --pico-color: #e3e6e8;
     --pico-h2-color: #ffffff;
 }
 
@@ -97,6 +99,10 @@ nav .enroll {
 
 nav .enroll:hover {
     background-color: var(--pico-color-yellow);
+}
+
+h1, h2, h3 {
+    font-weight: 800;
 }
 
 nav img {
@@ -144,6 +150,20 @@ hgroup:has(h1) {
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    hgroup {
+        margin-top: -2rem;
+    }
+}
+
+hgroup p:not(.credit) {
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 900;
+}
+
 h2 {
     --pico-font-size: 1.5rem;
     --pico-line-height: 1.175;
@@ -154,7 +174,7 @@ h2 {
 .credit {
     font-size: .875rem;
     font-style: italic;
-    margin-block-start: 0;
+    margin-block-start: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,6 +277,10 @@ h2 {
     width: 100%;
 }
 
+.enroll-form h3 {
+    font-weight: 800;
+}
+
 .enroll-form h3, .enroll-form ul {
     color: #fff !important;
 }
@@ -272,7 +296,7 @@ h2 {
 
 .price {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 800;
     color: #fff;
 }
 
