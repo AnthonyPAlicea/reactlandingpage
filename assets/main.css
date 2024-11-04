@@ -400,3 +400,23 @@ footer a, footer a:visited, footer a:hover {
     color: var(--pico-color-grey-200);
     font-weight: bold;
 }
+
+.announcement {
+    text-align: center;
+    margin-block-end: .25rem;
+}
+
+.announcement p {
+    color: #fff;
+    font-weight: bold;
+    background-color: var(--pico-color-blue-800);
+    max-width: 80%;
+    margin: 0 auto;
+    padding: .25rem;
+    border-radius: var(--pico-border-radius);
+    font-size: 0.75rem;
+}
+
+.announcement + .announcement {
+    margin-block-end: 1rem;
+}
