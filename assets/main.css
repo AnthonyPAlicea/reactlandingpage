@@ -407,9 +407,9 @@ footer a, footer a:visited, footer a:hover {
 }
 
 .announcement p {
-    color: #fff;
+    color: #000;
     font-weight: bold;
-    background-color: var(--pico-color-blue-800);
+    background-color: var(--pico-color-yellow-200);
     max-width: 80%;
     margin: 0 auto;
     padding: .25rem;
