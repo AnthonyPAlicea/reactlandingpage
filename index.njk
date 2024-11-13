@@ -437,13 +437,37 @@ og_image: 'assets/reactcourseog.png'
       <li>&check; Free future updates</li>
     </ul>    
   </article>
+  <article class="enroll-form">
+    <h3 class="enroll-header">Team Discounts</h3>
+    <p class="price" id="teamprice">$356</p>
+    <p>
+      <label>
+        # of licenses:
+      <select>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      </label>
+    </p>
+    <p class="lifetime">Lifetime Access</p>
+    <p class="lifetime">Tax/VAT Included</p>
+    <a id="buy-team-link" href="https://dontimitateunderstand.com/purchase?product_id=5947362"><button>Buy Licenses</button></a>
+    <ul class="enroll-list">
+      <li>💡 You'll receive special team links to enroll within 24 hours.</li>
+    </ul>    
+  </article>
 </section>
 
 <section class="container">
   <h2>FAQs</h2>
   <details>
-    <summary>Do you offer team discounts?</summary>
-    Yes! To request a discount for multiple seats for your team contact <a href="mailto:support@tonyalicea.dev">support@tonyalicea.dev</a>.
+    <summary>How do team licenses work?</summary>
+    Within 24 hours of purchase you'll receive a list of links, one for each license. Each team member may then use their own link to enroll for free with their own login.
   </details>
   <details>
     <summary>Do you offer Purchasing Power Parity (PPP) or student discounts?</summary>
@@ -474,5 +498,42 @@ og_image: 'assets/reactcourseog.png'
 
   // Redirect to the target URL with the query string parameters
   document.getElementById("buy-link").href = targetURL + (queryString ? queryString + '&' : '?')+ 'product_id=' + productID + couponCode; 
+
+  // team license display
+  // Map for licenses and corresponding product IDs and prices
+  // Updated map for licenses with product IDs and prices
+  const licenseOptions = {
+      4: { productId: '5947362', price: 356 },
+      5: { productId: '5947361', price: 445 },
+      6: { productId: '5947351', price: 534 },
+      7: { productId: '5597157', price: 623 },
+      8: { productId: '5617506', price: 712 },
+      9: { productId: '5617507', price: 801 },
+      10: { productId: '5617508', price: 890 }
+  };
+
+  // Function to update price, link, and button text
+  function updateTeamDiscount() {
+      const select = document.querySelector('.enroll-form select');
+      const priceElement = document.querySelector('#teamprice');
+      const buyLink = document.getElementById('buy-team-link'); // Updated link id
+      const buyButton = buyLink.querySelector('button'); // Access the button inside the link
+
+      const selectedValue = select.value;
+      const selectedOption = licenseOptions[selectedValue];
+
+      // Update price, link, and button text
+      if (selectedOption) {
+          priceElement.textContent = `$${selectedOption.price}`;
+          buyLink.setAttribute('href', `https://dontimitateunderstand.com/purchase?product_id=${selectedOption.productId}`);
+          buyButton.textContent = `Buy ${selectedValue} Licenses`; // Update button text
+      }
+  }
+
+  // Add event listener to the select element
+  document.querySelector('.enroll-form select').addEventListener('change', updateTeamDiscount);
+
+  // Initialize with the default selected value
+  updateTeamDiscount();
 </script> 
 {% endblock %}
