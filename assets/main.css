@@ -180,6 +180,18 @@ h2 {
     justify-content: center;
 }
 
+.quoteshot {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: -2000;
+    border: solid 1px #000;
+    opacity: 0.9;
+}
+
 .headshot {
     border-radius: 50%;
     width: 150px;
@@ -190,6 +202,10 @@ h2 {
     z-index: -2000;
     border: solid 1px #000;
     opacity: 0.9;
+}
+
+.speakingshot {
+    border-radius: 30%;
 }
 
 .headshot img {
@@ -219,7 +235,7 @@ h2 {
     padding: 1rem 0;
 }
 
-.aboutme, .imagegrid {
+.imagegrid {
     display: grid;
     grid-template-columns: .5fr 1.25fr;
     align-items: center;
@@ -362,6 +378,13 @@ h2 {
     flex-basis: 40%;
 }
 
+.quote-initial > article {
+    flex-basis: 100%;
+    background: none;
+    border: solid 1px #333;
+    font-size: .9rem;
+}
+
 @media (max-width: 600px) {
     .quotegrid > article {
         flex-basis: 100%;
@@ -371,6 +394,15 @@ h2 {
 
 .quotegrid p {
     font-weight: 700;
+}
+
+.quote-initial p { 
+    font-weight: 400;
+}
+
+.quote-signature {
+    margin: 1rem 0;
+    text-align: center;
 }
 
 /* Footer */
