@@ -62,15 +62,16 @@ og_image: 'assets/reactcourseog.png'
   <p class="credit"><img src="assets/tonyalicea.png" style="height: 30px;" /> &nbsp;&nbsp;by Tony Alicea</p>
 </hgroup>
 <hr />
-<!--
-<div class="countdown" data-end-time="2024-12-03T05:00:00Z">
+<div class="countdown" data-end-time="2025-01-02T05:00:00Z">
   <p style="align-self: center">Sale Ends:</p>
   <span class="days" data-label="Days">00</span>
   <span class="hours" data-label="Hours">00</span>
   <span class="minutes" data-label="Minutes">00</span>
   <span class="seconds" data-label="Seconds">00</span>
 </div>
--->
+<section class="container announcement">
+  <p>On Sale Through The End of the Year!</p>
+</section>
 <section class="container announcement">
   <p>React 19 Content Coming Soon!</p>
 </section>
@@ -490,7 +491,7 @@ og_image: 'assets/reactcourseog.png'
   </hgroup>
   <article class="enroll-form">
     <h3 class="enroll-header">Understanding React</h3>
-    <p class="price" id="price">$149</p><!--<label style="display: none;">For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>-->
+    <p class="price" id="price">$99&nbsp;<s>$149</s></p><!--<label style="display: none;">For Individuals&nbsp;&nbsp;<input name="teams" type="checkbox" role="switch" />For Teams</label>-->
     <!--<p class="lifetime"><b>On Sale For Cyber Monday!</b></p>-->
     <p class="lifetime">Lifetime Access</p>
     <p class="lifetime">Tax/VAT Included</p>
@@ -502,11 +503,12 @@ og_image: 'assets/reactcourseog.png'
   <span class="minutes" data-label="Minutes">00</span>
   <span class="seconds" data-label="Seconds">00</span>
 </div>-->
-    <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170"><button>Buy Now</button></a>
+    <!--<a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170"><button>Buy Now</button></a>-->
+    <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=4876170&coupon_code=REACT24"><button>Buy Now</button></a>
     <p>INCLUDES</p>
     <ul class="enroll-list">
       <li>&check; 16.5 hours of deep dive video</li>
-      <li>&check; 158 lectures</li>
+      <li>&check; 27 modules</li>
       <li>&check; All source code</li>
       <li>&check; Certificate of completion</li>
       <li>&check; Questions answered by me personally</li>
@@ -558,7 +560,7 @@ og_image: 'assets/reactcourseog.png'
 <script>
   const targetURL = 'https://dontimitateunderstand.com/purchase';
   const productID = '4876170';
-  const coupon_code = ''; // use to set permanent coupon
+  const coupon_code = 'REACT24'; // use to set permanent coupon
   const setPrice = "SET_PRICE";
   const price = "LIST_PRICE";
 
@@ -614,7 +616,7 @@ og_image: 'assets/reactcourseog.png'
 
   // -------------------------------------------
   // Countdown timer for sales
- /* document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
   function startCountdown(selector) {
     const timers = document.querySelectorAll(selector);
 
@@ -660,6 +662,6 @@ og_image: 'assets/reactcourseog.png'
 
   const activeIntervals = new Map();
   startCountdown('.countdown');
-});*/
+});
 </script> 
 {% endblock %}
