@@ -90,11 +90,18 @@ body > header > nav {
     opacity: 0.98;
 }
 
-nav .enroll {
+nav .enroll, .announcement .enroll {
     background-color: var(--pico-color-yellow-100);
     color: #000;
     font-weight: 900;
     border-color: #000;
+}
+
+.announcement .enroll {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: none;
 }
 
 nav .enroll:hover {
@@ -450,7 +457,7 @@ footer a, footer a:visited, footer a:hover {
 .announcement p {
     color: #000;
     font-weight: bold;
-    background-color: var(--pico-color-yellow-200);
+    /* background-color: var(--pico-color-yellow-200); *
     max-width: 80%;
     margin: 0 auto;
     padding: .25rem;
