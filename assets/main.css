@@ -215,6 +215,15 @@ h2 {
     object-position: center;
 }
 
+.countdown {
+    background-color: var(--pico-color-blue-600);
+}
+
+.countdown__main {
+    background-color: var(--pico-color-blue-900);
+    padding: 1rem;
+}
+
 /* Video */
 .video, video {
     text-align: center;
