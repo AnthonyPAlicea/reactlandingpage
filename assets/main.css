@@ -60,8 +60,8 @@
     --pico-color-grey-100: #e2e2e2;
     --pico-color-grey-50: #f1f1f1;
     --pico-color-grey: #ababab;
-    --pico-background-color: #000205;
-    --pico-font-family-sans-serif: 'Inter', system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,Helvetica,Arial,"Helvetica Neue",sans-serif,var(--pico-font-family-emoji);
+    --pico-background-color: #080F2D;
+    --pico-font-family-sans-serif: 'Noto Sans', sans-serif;
     --pico-color: #e3e6e8;
     --pico-h2-color: #ffffff;
 }
@@ -75,26 +75,15 @@ p + p {
 }
 
 /* Layout */
-body > header {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%; 
-}
-
-body > header > nav {
-    background-color: var(--pico-progress-background-color);
-    margin-block-start: 0;
-    padding: 0 1rem;
-    opacity: 0.98;
-}
-
-nav .enroll, .announcement .enroll {
+.enroll, .announcement .enroll {
     background-color: var(--pico-color-yellow-100);
     color: #000;
     font-weight: 900;
     border-color: #000;
+}
+
+.enroll {
+    margin-top: 1rem;
 }
 
 .announcement .enroll {
@@ -104,32 +93,19 @@ nav .enroll, .announcement .enroll {
     background-color: none;
 }
 
-nav .enroll:hover {
+.enroll:hover {
     background-color: var(--pico-color-yellow);
 }
 
-h2, h3 {
-    font-weight: 800;
-}
-
-nav img {
-    height: 40px;
-}
-
-@media (min-width: 768px) {
-    nav img {
-        height: 52px;
-    }
+h1, h2, h3 {
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
 }
 
 @media (min-width: 1024px) {
     .container {
         max-width: 700px;
     }
-}
-
-main {
-    margin-top: 2rem;
 }
 
 .hero-container {
@@ -153,22 +129,18 @@ main {
     color: var(--pico-color-yellow-150);
 }
 
-hgroup:has(h1) {
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    hgroup:has(h1) {
-        margin-top: -2rem;
-    }
+hgroup p {
+    margin-top: .5rem;
 }
 
 hgroup p:not(.credit) {
     font-weight: 700;
+    text-wrap: balance;
 }
 
 h1 {
     font-weight: 900;
+    font-size: 2.75rem;
 }
 
 h2 {
@@ -181,10 +153,7 @@ h2 {
 .credit {
     font-size: .875rem;
     font-style: italic;
-    margin-block-start: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-block-start: 0.5rem;
 }
 
 .quoteshot {
