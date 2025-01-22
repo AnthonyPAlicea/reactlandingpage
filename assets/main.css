@@ -184,6 +184,11 @@ h2 {
     opacity: 0.9;
 }
 
+.slideimage {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+}
+
 .whatiget {
     background-color: var(--pico-color-blue-800);
     padding: 0;
