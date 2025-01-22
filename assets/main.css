@@ -108,6 +108,10 @@ h1, h2, h3 {
     }
 }
 
+.no-block-end-margin {
+    margin-block-end: 0;
+}
+
 .hero-container {
     width: 100%;
     display: flex;
@@ -180,8 +184,61 @@ h2 {
     opacity: 0.9;
 }
 
+.whatiget {
+    background-color: var(--pico-color-blue-800);
+    padding: 0;
+    width: 100%;
+}
+
+.whatiget-container {
+    padding: 0;
+}
+
+.whatigetlist {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 8px;
+    min-height: 150px;
+    padding-block-start: 1rem;
+    padding-block-end: 1rem;
+}
+
+.whatigetlist__item {
+    background-color: var(--pico-color-blue-950);
+    padding: 5%;
+    flex: 1;
+}
+
+.whatigetlist__item p {
+    font-weight: 900;
+}
+
+.whatigetlist__num {
+    font-size: 200%;
+    color: var(--pico-color-grey-150);
+    display: block;
+}
+
+.curriculum__list {
+    background-color: var(--pico-color-blue-900);
+    padding: 1rem;
+    width: 100%;
+}
+
+.curriculum details {
+    background-color: var(--pico-color-blue-800);
+    padding: .75rem;
+    margin-block-end: 1rem;
+    font-weight: 700;
+    font-size: 80%;
+}
+
 .speakingshot {
     border-radius: 30%;
+    margin-block-end: 1rem;
 }
 
 .headshot img {
@@ -208,6 +265,10 @@ h2 {
 }
 
 /* About Me */
+.aboutme {
+    font-size: 1.2rem;
+}
+
 .aboutme-container {
     text-align: center;
 }
@@ -357,6 +418,7 @@ h2 {
     gap: 20px;
     font-size: .75rem;
     justify-content: center;
+    padding-block-end: 0;
 }
 
 .quotegrid > article {
