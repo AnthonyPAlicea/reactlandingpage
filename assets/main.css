@@ -424,6 +424,7 @@ h2 {
     font-size: .75rem;
     justify-content: center;
     padding-block-end: 0;
+    margin-block-end: 1rem;
 }
 
 .quotegrid > article {
@@ -458,7 +459,7 @@ h2 {
 }
 
 .quote-signature {
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
     text-align: center;
 }
 
