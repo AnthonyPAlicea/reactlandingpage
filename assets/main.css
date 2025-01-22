@@ -428,6 +428,11 @@ h2 {
 
 .quotegrid > article {
     flex-basis: 40%;
+    border: solid 2px var(--pico-color-yellow-500);
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .quote-initial > article {
@@ -453,8 +458,13 @@ h2 {
 }
 
 .quote-signature {
-    margin: 1rem 0;
-    text-align: center;
+    background-color: var(--pico-color-yellow-200);
+    color: #000;
+    font-weight: 900;
+    display: inline-block;
+    padding: 0.25rem;
+    border-radius: 3px;
+    align-self: flex-start;
 }
 
 /* Footer */
