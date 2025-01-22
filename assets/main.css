@@ -458,6 +458,11 @@ h2 {
 }
 
 .quote-signature {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.signed {
     background-color: var(--pico-color-yellow-200);
     color: #000;
     font-weight: 900;
