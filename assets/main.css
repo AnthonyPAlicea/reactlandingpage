@@ -250,8 +250,24 @@ h2 {
     font-size: 80%;
 }
 
-.curriculum details li::marker {
-    color: var(--pico-color-yellow-100);
+.curriculum ul {
+    padding-left: 1rem;
+    padding-block-start: 1rem;
+}
+
+.curriculum details li {
+    margin-block-end: 1rem;
+    list-style: none;
+}
+
+.curriculum .curriculum__lecturenum {
+    font-size: .675rem;
+    color: var(--pico-color-grey-250);
+    display: block;
+    margin: 0;
+    margin-block-end: .1rem;
+    padding: 0;
+    border-bottom: solid 1px var(--pico-color-yellow-100);
 }
 
 .speakingshot {
