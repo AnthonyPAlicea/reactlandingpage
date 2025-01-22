@@ -227,6 +227,15 @@ h2 {
     display: block;
 }
 
+.curriculum__modulenum {
+    font-size: .6rem;
+    color: var(--pico-color-grey-250);
+    display: block;
+    margin: 0;
+    margin-block-end: .25rem;
+    padding: 0;
+}
+
 .curriculum__list {
     background-color: var(--pico-color-blue-900);
     padding: 1rem;
@@ -239,6 +248,10 @@ h2 {
     margin-block-end: 1rem;
     font-weight: 700;
     font-size: 80%;
+}
+
+.curriculum details li::marker {
+    color: var(--pico-color-yellow-100);
 }
 
 .speakingshot {
