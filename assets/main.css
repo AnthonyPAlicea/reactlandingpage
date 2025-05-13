@@ -155,7 +155,7 @@ h2 {
 }
 
 .credit {
-    font-size: .875rem;
+    font-size: 1rem;
     font-style: italic;
     margin-block-start: 0.5rem;
 }
@@ -383,6 +383,24 @@ h2 {
 
 .enroll-header {
     margin: 0;
+}
+
+.enroll-desc {
+    font-size: 0.95rem;
+    margin: -2rem -1rem 1rem -1rem;
+    background-color: var(--pico-color-yellow-200);
+    padding: .5rem;
+}
+
+.enroll-desc-title {
+    font-weight: 900;
+    padding-block-end: 0;
+    color: #000;
+}
+
+.enroll-desc-detail {
+    color: #000;
+    margin-block-start: .25rem;
 }
 
 .salemsg {
