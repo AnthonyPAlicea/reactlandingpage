@@ -57,10 +57,10 @@ html {
 
 {% block body %}
 <hgroup class="container">
-  <h1>Master React Like the Engineers Who Built It.</h1>
-  <p>Stop copying code that an instructor types. Start understanding how React actually works under-the-hood.</p>
+  <h1>Master React From First Principles.</h1>
+  <p>Stop copying code that an instructor types. Deepen your understanding. Dive into React's internals under-the-hood. Re-learn React from scratch the right way.</p>
   <p class="credit"><img src="assets/tonyalicea.png" style="height: 30px;" /> &nbsp;&nbsp;by Tony Alicea</p>
-  <a href="#enroll"><button class="enroll">Start Your Mastery</button></a>
+  <a href="#enroll"><button class="enroll">Start Understanding React</button></a>
   <p class="credit" style="color: #fff; padding-block-start: 1rem;">📣 <b>Updated for React 19!</b></p>
   <p class="credit" style="color: #fff; padding-block-start: 0.5rem;">📣 <b>Bundle With Upcoming State Management Add-On!</b> Dive deeper into React State Management with Jotai, Zustand, XState, and TanStack Query!</p>
 </hgroup>
@@ -518,7 +518,7 @@ html {
       <p class="enroll-desc-detail">Master React by diving under-the-hood.</p>
     </section>
     -->
-    <h3 class="enroll-header">Understanding React Core</h3>
+    <h3 class="enroll-header">Understanding React <b class="enroll-header-type">Core</b></h3>
     <p class="lifetime">The 17-hour Core Course</p>
     <p class="price" id="price">$179</p>
     <!--<p class="lifetime"><b>Spring Sale - Price Goes Up Soon!</b></p>-->
@@ -553,9 +553,9 @@ html {
       <p class="enroll-desc-detail">Dive under-the-hood of React as well as popular state management libraries for React.</p>
     </section>
     -->
-    <h3 class="enroll-header">Understanding React Complete</h3>
+    <h3 class="enroll-header">Understanding React <b class="enroll-header-type">Complete</b></h3>
     <p class="lifetime">The 17-hour Core<br />plus The Upcoming State-Management Add-On</p>
-    <p class="price" id="price">$279</p>
+    <p class="price" id="completeprice">$279</p>
     <p class="lifetime">The 17-Hour Core Course</p>
     <p class="lifetime">Pre-Sale Price for Upcoming Add-On!</p>
     <p class="lifetime">Jotai, Zustand, XState, TanStack Query</p>
@@ -570,8 +570,8 @@ html {
   <span class="seconds" data-label="Seconds">00</span>
 </div>
 
-    <a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=6304723"><button>Enroll Now</button></a>
-     <!--<a id="buy-link" href="https://dontimitateunderstand.com/purchase?product_id=6226187&coupon_code=STATEMGMT" onclick="return gtag_report_conversion('https://dontimitateunderstand.com/purchase?product_id=6226187&coupon_code=STATEMGMT')"><button>Buy Now</button></a>-->
+    <a id="complete-buy-link" href="https://dontimitateunderstand.com/purchase?product_id=6304723"><button>Enroll Now</button></a>
+     <!--<a id="complete-buy-link" href="https://dontimitateunderstand.com/purchase?product_id=6226187&coupon_code=STATEMGMT" onclick="return gtag_report_conversion('https://dontimitateunderstand.com/purchase?product_id=6226187&coupon_code=STATEMGMT')"><button>Buy Now</button></a>-->
     <p>INCLUDES</p>
     <ul class="enroll-list">
       <li>&check; Everything in Understanding React</li>
@@ -631,13 +631,17 @@ html {
 <script>
   const targetURL = 'https://dontimitateunderstand.com/purchase';
   const productID = '6304721';
+  const completeProductID = '6304723';
   const coupon_code = ''; // use to set permanent coupon
   const setPrice = "SET_PRICE";
   const price = "LIST_PRICE";
+  const completeprice = "LIST_COMPLETEPRICE";
+  const basecompleteprice = "279";
 
   // Set price if coupon code passed
   if (setPrice === "YesSetPrice") {
     document.getElementById("price").innerHTML = '$' + price;
+    document.getElementById("completeprice").innerHTML = '$' + completeprice;
   }
 
   // Get the current URL's query string parameters
@@ -647,6 +651,10 @@ html {
 
   // Redirect to the target URL with the query string parameters
   document.getElementById("buy-link").href = targetURL + (queryString ? queryString + '&' : '?')+ 'product_id=' + productID + couponCode; 
+
+if (completeprice != basecompleteprice) {
+  document.getElementById("complete-buy-link").href = targetURL + (queryString ? queryString + '&' : '?')+ 'product_id=' + completeProductID + couponCode; 
+}
 
   // team license display
   // Map for licenses and corresponding product IDs and prices
