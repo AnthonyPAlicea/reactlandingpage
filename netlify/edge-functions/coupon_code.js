@@ -57,7 +57,9 @@ if (!foundCoupon) return;
 price = price + "&nbsp;<s>$179</s>"
 
 if (foundCompleteCoupon) {
+
   completeprice = completeprice + "&nbsp;<s>$279</s>";
+
 }
 
 if (coupon_code === "UDEMYSTUDENT") {
