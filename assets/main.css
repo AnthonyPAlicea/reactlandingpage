@@ -300,11 +300,16 @@ h2 {
 
 /* About Me */
 .aboutme {
-    font-size: 1.2rem;
+    background-color: var(--pico-color-blue-700);;
+    padding: 1rem 0;
 }
 
-.aboutme-container {
-    text-align: center;
+.aboutme img {
+    border-radius: 15px;
+}
+
+.aboutme-details {
+    font-size: 1rem;
 }
 
 .aboutme-container h2 {
@@ -331,7 +336,6 @@ h2 {
 @media (max-width: 768px) {
     .aboutme {
         grid-template-columns: 1fr;
-        text-align: center;
     }
 
     .imagegrid {
