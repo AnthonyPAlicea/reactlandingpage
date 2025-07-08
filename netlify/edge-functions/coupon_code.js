@@ -31,7 +31,8 @@ export default async (request, context) => {
     { code: 'PPPREQUEST', type:'I', newPrice: "37<small>.25</small>" },
     { code: 'JSJABBER', type:'I', newPrice: "99" },
     { code: 'REACTIFLUX', type:'I', newPrice: "99<small>.83</small>" },
-    { code: 'UDEMYSTUDENT', type:'I', newPrice: "129", newCompletePrice: "229" }
+    { code: 'UDEMYSTUDENT', type:'I', newPrice: "129", newCompletePrice: "229" },
+    { code: 'PRIMEDAY', type:'I', newPrice: "129", newCompletePrice: "229" }
 ];
 
 let price = "179";
