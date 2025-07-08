@@ -7,4 +7,3 @@ node_modules
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
 package-lock.json
-package-lock.json
