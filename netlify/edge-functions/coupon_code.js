@@ -1,10 +1,4 @@
-import {
-	EleventyEdge,
-	precompiledAppData,
-} from "./_generated/eleventy-edge-app.js";
-
 export default async (request, context) => {
-
   // Just return what was requested without transforming it, 
   // unless we fnd the coupon code query parameter
   const url = new URL(request.url);
@@ -18,7 +12,7 @@ export default async (request, context) => {
   // Get the page content
   const response = await context.next();
   const page = await response.text();
-
+  
   // Search for the placeholder
   const regex1 = /SET_PRICE/i;
   const regex2 = /LIST_PRICE/i;
@@ -35,8 +29,8 @@ export default async (request, context) => {
     { code: 'PRIMEDAY', type:'I', newPrice: "129", newCompletePrice: "229" }
 ];
 
-let price = "179";
-let completeprice = "279";
+let price = "199";
+let completeprice = "299";
 
 // Check if any coupon code is present in the query parameters and update the price
 let foundCoupon = false;
@@ -75,3 +69,5 @@ if (coupon_code === "UDEMYSTUDENT") {
   const updatedPage3 = updatedPage2.replace(regex3, completeprice);
   return new Response(updatedPage3, response);
 };
+
+export const config = { path: "/" };
