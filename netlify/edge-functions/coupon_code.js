@@ -55,11 +55,11 @@ coupons.forEach(coupon => {
 
 if (!foundCoupon) return;
 
-price = price + "&nbsp;<s>$179</s>"
+price = price + "&nbsp;<s>$199</s>"
 
 if (foundCompleteCoupon) {
 
-  completeprice = completeprice + "&nbsp;<s>$279</s>";
+  completeprice = completeprice + "&nbsp;<s>$299</s>";
 
 }
 
