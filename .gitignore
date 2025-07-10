@@ -1,9 +1,27 @@
-/_site
-node_modules
-.vscode/
-# Netlify generated stuff
-.netlify/
+# build output
+dist/
 
-# Eleventy Edge Build Data files
-netlify/edge-functions/_generated
-package-lock.json
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# Local Netlify folder
+.netlify

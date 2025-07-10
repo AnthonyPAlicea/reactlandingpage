@@ -1,15 +1,10 @@
 [dev]
-framework = "#static"
-command = "npx @11ty/eleventy --quiet --watch"
+command = "astro dev"
 
 [build]
-command = "npx @11ty/eleventy"
-publish = "_site"
+  command = "npm run build"
+  publish = "dist"
 
 [[edge_functions]]
-function = "coupon_code"
-path = "/*"
-
-[[edge_functions]]
-function = "eleventy-edge"
-path = "/*"
+function = "coupon_code" 
+path = "/"
