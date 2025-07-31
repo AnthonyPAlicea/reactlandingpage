@@ -378,7 +378,7 @@ import Layout from '../layouts/Layout.astro';
 
         // Update price, link, and button text
         if (selectedOption) {
-            priceElement.textContent = `${selectedOption.price}`;
+            priceElement.textContent = `$` + `${selectedOption.price}`;
             buyLink.setAttribute('href', `https://dontimitateunderstand.com/purchase?product_id=${selectedOption.productId}`);
             buyButton.textContent = `Buy ${selectedValue} Licenses`;
         }
