@@ -26,7 +26,8 @@ export default async (request, context) => {
     { code: 'JSJABBER', type:'I', newPrice: "99" },
     { code: 'REACTIFLUX', type:'I', newPrice: "99<small>.83</small>" },
     { code: 'UDEMYSTUDENT', type:'I', newPrice: "129", newCompletePrice: "229" },
-    { code: 'PRIMEDAY', type:'I', newPrice: "129", newCompletePrice: "229" }
+    { code: 'PRIMEDAY', type:'I', newPrice: "129", newCompletePrice: "229" },
+    { code: 'SUMMER50', type:'I', newPrice: "99", newCompletePrice: "159" }
 ];
 
 let price = "199";
