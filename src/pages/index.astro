@@ -50,25 +50,44 @@ import Layout from '../layouts/Layout.astro';
         margin-top: 2rem;
         position: relative;
         overflow: hidden;
-      }
-
-      /* Subtle pattern overlay on hero */
-      hgroup.container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 300px;
-        height: 300px;
-        background: url('/assets/react_courseimage.png') no-repeat center;
-        background-size: contain;
-        opacity: 0.08;
-        z-index: 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+        align-items: center;
       }
 
       hgroup.container > * {
         position: relative;
         z-index: 1;
+        grid-column: 1;
+      }
+
+      hgroup.container::after {
+        content: '';
+        position: relative;
+        grid-column: 2;
+        grid-row: 1 / -1;
+        width: 200px;
+        height: 200px;
+        background: url('/assets/react_courseimage.png') no-repeat center;
+        background-size: contain;
+        opacity: 0.9;
+        z-index: 1;
+      }
+
+      @media (max-width: 768px) {
+        hgroup.container {
+          grid-template-columns: 1fr;
+        }
+
+        hgroup.container::after {
+          grid-column: 1;
+          grid-row: auto;
+          width: 150px;
+          height: 150px;
+          margin: 1rem auto 0;
+          justify-self: center;
+        }
       }
 
       /* Enhance headings with gradients */
@@ -103,24 +122,23 @@ import Layout from '../layouts/Layout.astro';
         box-shadow: 0 15px 50px rgba(59, 130, 246, 0.15);
       }
 
-      /* Iceberg background for depth sections */
-      section.container:nth-of-type(6),
-      section.container:nth-of-type(7) {
+      /* Iceberg background for depth sections - fixed positioning to span multiple sections */
+      main {
         position: relative;
-        overflow: hidden;
       }
 
-      section.container:nth-of-type(6)::before {
+      main::before {
         content: '';
-        position: absolute;
-        bottom: -50%;
+        position: fixed;
+        bottom: -20%;
         left: 50%;
         transform: translateX(-50%);
-        width: 120%;
-        height: 150%;
+        width: 100%;
+        max-width: 1400px;
+        height: 80vh;
         background: url('/assets/iceberg2.webp') no-repeat center bottom;
         background-size: contain;
-        opacity: 0.03;
+        opacity: 0.06;
         z-index: 0;
         pointer-events: none;
       }
@@ -219,20 +237,21 @@ import Layout from '../layouts/Layout.astro';
       .whatiget {
         background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(37, 99, 235, 0.4) 100%);
         position: relative;
-        overflow: hidden;
       }
 
       .whatiget::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 160%;
         background: url('/assets/rocketlaptop.png') no-repeat center;
-        background-size: cover;
-        opacity: 0.05;
+        background-size: contain;
+        opacity: 0.08;
         z-index: 0;
+        pointer-events: none;
       }
 
       .whatigetlist__item {
@@ -358,18 +377,20 @@ import Layout from '../layouts/Layout.astro';
       /* Curriculum section */
       .curriculum {
         position: relative;
+        overflow: visible;
       }
 
       .curriculum::before {
         content: '';
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        background: url('/assets/bg_glacier.png') no-repeat center bottom;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 200%;
+        background: url('/assets/bg_glacier.png') no-repeat center;
         background-size: cover;
-        opacity: 0.05;
+        opacity: 0.08;
         z-index: 0;
         pointer-events: none;
       }
