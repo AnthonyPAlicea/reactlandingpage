@@ -242,16 +242,18 @@ import Layout from '../layouts/Layout.astro';
       .whatiget::before {
         content: '';
         position: absolute;
-        top: -30%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        width: 150%;
-        height: 160%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 600px;
+        height: 80%;
         background: url('/assets/rocketlaptop.png') no-repeat center;
         background-size: contain;
-        opacity: 0.08;
+        opacity: 0.15;
         z-index: 0;
         pointer-events: none;
+        mix-blend-mode: lighten;
       }
 
       .whatigetlist__item {
