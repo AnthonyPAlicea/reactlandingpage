@@ -233,27 +233,26 @@ import Layout from '../layouts/Layout.astro';
         }
       }
 
-      /* Enhanced whatiget section */
+      /* Enhanced whatiget section with rocket laptop background */
       .whatiget {
         background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(37, 99, 235, 0.4) 100%);
         position: relative;
+        overflow: visible;
       }
 
       .whatiget::before {
         content: '';
         position: absolute;
-        top: 50%;
+        top: -50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        max-width: 600px;
-        height: 80%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 200%;
         background: url('/assets/rocketlaptop.png') no-repeat center;
-        background-size: contain;
-        opacity: 0.15;
+        background-size: cover;
+        opacity: 0.08;
         z-index: 0;
         pointer-events: none;
-        mix-blend-mode: lighten;
       }
 
       .whatigetlist__item {
@@ -445,6 +444,28 @@ import Layout from '../layouts/Layout.astro';
       /* Smooth transitions for all interactive elements */
       a, button, .enroll-form, .quotegrid > article, .whatigetlist__item {
         transition: all 0.3s ease;
+      }
+
+      /* Fix horizontal scrollbar caused by overflowing backgrounds */
+      body, html {
+        overflow-x: hidden;
+      }
+
+      main {
+        overflow-x: hidden;
+      }
+
+      /* Add background to paragraph overlapping rocket */
+      section.container > p[style*="font-size: 1.15rem"] {
+        background: rgba(15, 23, 42, 0.85);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      section.container > p[style*="font-size: 1.15rem"] > b {
+        background: none;
+        padding: 0;
       }
     </style>
   </Fragment>
