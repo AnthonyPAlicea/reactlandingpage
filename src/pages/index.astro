@@ -88,6 +88,15 @@ import Layout from '../layouts/Layout.astro';
         overflow: hidden;
       }
 
+      @media (max-width: 768px) {
+        hgroup.container {
+          border-radius: 0;
+          margin-top: 0;
+          border-left: none;
+          border-right: none;
+        }
+      }
+
       hgroup.container > * {
         position: relative;
         z-index: 1;
@@ -123,11 +132,6 @@ import Layout from '../layouts/Layout.astro';
       section.container:hover {
         transform: translateY(-2px);
         box-shadow: 0 15px 50px rgba(59, 130, 246, 0.15);
-      }
-
-      /* Iceberg background for depth sections - fixed positioning to span multiple sections */
-      main {
-        position: relative;
       }
 
       main::before {

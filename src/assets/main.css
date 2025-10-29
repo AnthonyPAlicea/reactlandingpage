@@ -635,3 +635,9 @@ footer a, footer a:visited, footer a:hover {
 .announcement + .announcement {
     margin-block-end: 1rem;
 }*/
+
+      @media (max-width: 768px) {
+        body>main {
+          padding-block-start: 0;
+        }
+      }
