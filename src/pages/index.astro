@@ -11,7 +11,155 @@ import Layout from '../layouts/Layout.astro';
       html {
         scroll-behavior: smooth;
       }
-      /* General styling for the countdown container */
+
+      /* Modern gradient background */
+      body {
+        background: linear-gradient(135deg, #0a0f2c 0%, #1a2456 50%, #0a0f2c 100%);
+        background-attachment: fixed;
+        position: relative;
+      }
+
+      /* Animated gradient overlay */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Ensure content is above gradient */
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Hero section with dramatic styling */
+      hgroup.container {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(30, 64, 175, 0.2) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 3rem 2rem !important;
+        border: 1px solid rgba(96, 165, 250, 0.2);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        margin-top: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle pattern overlay on hero */
+      hgroup.container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: url('/assets/react_courseimage.png') no-repeat center;
+        background-size: contain;
+        opacity: 0.08;
+        z-index: 0;
+      }
+
+      hgroup.container > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Enhance headings with gradients */
+      h1 {
+        background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 30px rgba(147, 197, 253, 0.3);
+      }
+
+      h2 {
+        background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Section styling with cards */
+      section.container {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        border: 1px solid rgba(59, 130, 246, 0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      section.container:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 50px rgba(59, 130, 246, 0.15);
+      }
+
+      /* Iceberg background for depth sections */
+      section.container:nth-of-type(6),
+      section.container:nth-of-type(7) {
+        position: relative;
+        overflow: hidden;
+      }
+
+      section.container:nth-of-type(6)::before {
+        content: '';
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120%;
+        height: 150%;
+        background: url('/assets/iceberg2.webp') no-repeat center bottom;
+        background-size: contain;
+        opacity: 0.03;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* Enhanced buttons */
+      button.enroll, .enroll-form button {
+        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        color: #000;
+        font-weight: 900;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      button.enroll::before, .enroll-form button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s ease;
+      }
+
+      button.enroll:hover::before, .enroll-form button:hover::before {
+        left: 100%;
+      }
+
+      button.enroll:hover, .enroll-form button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+      }
+
+      /* Enhanced countdown timer */
       .countdown {
         display: flex;
         gap: 10px;
@@ -19,6 +167,9 @@ import Layout from '../layouts/Layout.astro';
         padding: 10px 20px;
         justify-content: center;
         margin-block-end: 1rem;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
+        border-radius: 12px;
+        border: 1px solid rgba(96, 165, 250, 0.3);
       }
 
       .enroll-form > .countdown {
@@ -26,23 +177,25 @@ import Layout from '../layouts/Layout.astro';
         margin-block-end: 0;
       }
 
-      /* Styling for each time unit (days, hours, etc.) */
       .countdown span {
         display: flex;
         flex-direction: column;
         align-items: center;
         min-width: 40px;
+        background: rgba(30, 58, 138, 0.5);
+        padding: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid rgba(96, 165, 250, 0.2);
       }
 
-      /* Add labels below the numbers for better clarity */
       .countdown span::after {
         content: attr(data-label);
         font-size: 12px;
         font-weight: normal;
         margin-top: 4px;
+        color: #93c5fd;
       }
 
-      /* Adjust for smaller screens */
       @media (max-width: 600px) {
         .countdown {
           font-size: 16px;
@@ -52,6 +205,191 @@ import Layout from '../layouts/Layout.astro';
         .countdown span {
           min-width: 30px;
         }
+
+        hgroup.container {
+          padding: 2rem 1.5rem !important;
+        }
+
+        section.container {
+          padding: 2rem 1.5rem;
+        }
+      }
+
+      /* Enhanced whatiget section */
+      .whatiget {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(37, 99, 235, 0.4) 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .whatiget::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/assets/rocketlaptop.png') no-repeat center;
+        background-size: cover;
+        opacity: 0.05;
+        z-index: 0;
+      }
+
+      .whatigetlist__item {
+        background: linear-gradient(135deg, rgba(8, 15, 45, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+        border: 1px solid rgba(96, 165, 250, 0.2);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .whatigetlist__item:hover {
+        transform: translateY(-5px);
+        border-color: rgba(96, 165, 250, 0.5);
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+      }
+
+      .whatigetlist__num {
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* About me section */
+      .aboutme {
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+        position: relative;
+      }
+
+      /* Video container */
+      .video iframe {
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border: 2px solid rgba(59, 130, 246, 0.3);
+      }
+
+      /* Enhanced enrollment cards */
+      .enroll-form {
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+        border: 2px solid;
+        border-image: linear-gradient(135deg, #fbbf24, #f59e0b) 1;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .enroll-form::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(135deg, #fbbf24, #f59e0b, #3b82f6);
+        border-radius: 20px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .enroll-form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 70px rgba(251, 191, 36, 0.2);
+      }
+
+      .enroll-form:hover::before {
+        opacity: 1;
+      }
+
+      /* Quote cards */
+      .quotegrid > article {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 64, 175, 0.2) 100%);
+        border: 2px solid rgba(251, 191, 36, 0.3);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .quotegrid > article:hover {
+        transform: translateY(-5px);
+        border-color: rgba(251, 191, 36, 0.6);
+        box-shadow: 0 15px 40px rgba(251, 191, 36, 0.2);
+      }
+
+      .quote-initial > article {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(30, 64, 175, 0.3) 100%);
+        border: 1px solid rgba(96, 165, 250, 0.3);
+      }
+
+      /* Curriculum section */
+      .curriculum {
+        position: relative;
+      }
+
+      .curriculum::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: url('/assets/bg_glacier.png') no-repeat center bottom;
+        background-size: cover;
+        opacity: 0.05;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .curriculum__list {
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 12px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      .curriculum details {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(30, 64, 175, 0.3) 100%);
+        border-radius: 8px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      /* HR styling */
+      hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.5), transparent);
+        margin: 2rem 0;
+      }
+
+      /* Image enhancements */
+      .slideimage {
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      /* Details/summary enhancement */
+      details {
+        transition: all 0.3s ease;
+      }
+
+      details:hover {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.5) 0%, rgba(30, 64, 175, 0.4) 100%) !important;
+      }
+
+      summary {
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      summary:hover {
+        color: #93c5fd;
+      }
+
+      /* Smooth transitions for all interactive elements */
+      a, button, .enroll-form, .quotegrid > article, .whatigetlist__item {
+        transition: all 0.3s ease;
       }
     </style>
   </Fragment>

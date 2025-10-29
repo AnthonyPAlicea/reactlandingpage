@@ -76,10 +76,12 @@ p + p {
 
 /* Layout */
 .enroll, .announcement .enroll {
-    background-color: var(--pico-color-yellow-100);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
     color: #000;
     font-weight: 900;
-    border-color: #000;
+    border: none;
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+    transition: all 0.3s ease;
 }
 
 .enroll {
@@ -90,11 +92,13 @@ p + p {
     font-size: 0.75rem;
     padding: 0.5rem;
     border: none;
-    background-color: none;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
 }
 
 .enroll:hover {
-    background-color: var(--pico-color-yellow);
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
 }
 
 h1, h2, h3 {
@@ -190,13 +194,16 @@ h2 {
 }
 
 .whatiget {
-    background-color: var(--pico-color-blue-800);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(37, 99, 235, 0.4) 100%);
     padding: 0;
     width: 100%;
+    position: relative;
 }
 
 .whatiget-container {
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .whatigetlist {
@@ -212,9 +219,12 @@ h2 {
 }
 
 .whatigetlist__item {
-    background-color: var(--pico-color-blue-950);
+    background: linear-gradient(135deg, rgba(8, 15, 45, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
     padding: 5%;
     flex: 1;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 
 .whatigetlist__item p {
@@ -223,7 +233,10 @@ h2 {
 
 .whatigetlist__num {
     font-size: 200%;
-    color: var(--pico-color-grey-150);
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     display: block;
 }
 
@@ -283,12 +296,16 @@ h2 {
 }
 
 .countdown {
-    background-color: var(--pico-color-blue-600);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
 .countdown__main {
-    background-color: var(--pico-color-blue-900);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
     padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
 /* Video */
@@ -300,12 +317,15 @@ h2 {
 
 /* About Me */
 .aboutme {
-    background-color: var(--pico-color-blue-900);;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
     padding: 1rem 0;
+    position: relative;
 }
 
 .aboutme img {
     border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .aboutme-details {
@@ -366,10 +386,14 @@ h2 {
 }
 
 .enroll-form {
-    background-color: var(--pico-color-blue-900);
-    border: solid 2px var(--pico-color-yellow-100);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #fbbf24, #f59e0b) 1;
     max-width: 500px;
     color: #fff !important;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .enroll-form label {
@@ -457,11 +481,21 @@ h2 {
 
 .enroll-form button {
     width: 100%;
-    background-color: var(--pico-color-yellow-100);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
     color: #000;
     font-weight: bold;
     border: none;
     margin: 1.25rem 0 1rem 0;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+    transition: all 0.3s ease;
+}
+
+.enroll-form button:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
 }
 
 .enroll-list {
@@ -485,6 +519,7 @@ h2 {
     color: var(--pico-color-yellow);
     font-size: 1.25rem !important;
     margin: 0;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
 }
 
 .quotegrid {
@@ -499,17 +534,26 @@ h2 {
 
 .quotegrid > article {
     flex-basis: 40%;
-    border: solid 2px var(--pico-color-yellow-500);
-    background: none;
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 64, 175, 0.2) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.quotegrid > article:hover {
+    transform: translateY(-5px);
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.2);
 }
 
 .quote-initial > article {
     flex-basis: 100%;
-    background: none;
-    border: solid 1px #333;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(30, 64, 175, 0.3) 100%);
+    border: 1px solid rgba(96, 165, 250, 0.3);
     font-size: .9rem;
 }
 
@@ -534,13 +578,14 @@ h2 {
 }
 
 .signed {
-    background-color: var(--pico-color-yellow-200);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
     color: #000;
     font-weight: 900;
     display: inline-block;
     padding: 0.25rem;
     border-radius: 3px;
     align-self: flex-start;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
 }
 
 /* Footer */
